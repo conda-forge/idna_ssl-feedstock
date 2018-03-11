@@ -1,6 +1,6 @@
 {% set name = "idna_ssl" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "1227e44039bd31e02adaeafdbba61281596d623d222643fb021f87f2144ea147" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "1293f030bc608e9aa9cdee72aa93c1521bbb9c7698068c61c9ada6772162b979" %}
 
 package:
   name: {{ name|lower }}
