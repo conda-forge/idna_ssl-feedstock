@@ -17,11 +17,11 @@ build:
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
-    - python >=3.5,<3.7
+  host:
+    - python
     - pip
   run:
-    - python >=3.5,<3.7
+    - python
     - idna
 
 test:
