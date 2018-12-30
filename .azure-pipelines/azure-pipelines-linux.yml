@@ -6,8 +6,8 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_:
-        CONFIG: linux_
+      linux_python3.6:
+        CONFIG: linux_python3.6
   steps:
   - script: |
       sudo pip install --upgrade pip
