@@ -1,22 +1,22 @@
-{% set name = "idna_ssl" %}
-{% set version = "1.0.1" %}
+{% set name = "idna-ssl" %}
+{% set version = "1.1.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name|lower|replace("-","_") }}
   version: {{ version }}
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
-  sha256: 1293f030bc608e9aa9cdee72aa93c1521bbb9c7698068c61c9ada6772162b979
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a933e3bb13da54383f9e8f35dc4f9cb9eb9b3b78c6b36f311254d6d0d92c6c7c
 
 build:
   number: 0
+  skip: True  # [py27]
   script: python -m pip install --no-deps --ignore-installed .
-  skip: True  # [py>=37 or py2k]
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
